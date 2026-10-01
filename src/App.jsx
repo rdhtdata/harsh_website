@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Intro from './components/Intro';
-import SelectedWork from './components/SelectedWork';
 import Capabilities from './components/Capabilities';
-import Process from './components/Process';
+import SelectedWork from './components/SelectedWork';
 import Experience from './components/Experience';
+import Process from './components/Process';
+import Technology from './components/Technology';
+import GithubProof from './components/GithubProof';
 import About from './components/About';
 import Philosophy from './components/Philosophy';
-import Now from './components/Now';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CaseStudyModal from './components/CaseStudyModal';
@@ -35,43 +35,56 @@ export default function App() {
       data-theme={currentTheme}
       className="min-h-screen bg-canvas text-ink selection:bg-accent/15 selection:text-ink transition-colors duration-200"
     >
-      {/* Navigation with Light/Dark Mode Switch */}
+      {/* Sticky Navigation with Light/Dark Mode Switch */}
       <Navbar
         currentTheme={currentTheme}
         onToggleTheme={toggleTheme}
         onOpenResume={() => setIsResumeOpen(true)}
       />
 
-      {/* Main Content Sections */}
+      {/* Main Content Sections in Strategic 2026 AI Engineer Hierarchy */}
       <main id="main-content">
-        <Hero onOpenContact={() => {
-          const el = document.getElementById('contact');
-          if (el) el.scrollIntoView({ behavior: 'smooth' });
-        }} />
+        {/* 01: Hero */}
+        <Hero
+          onOpenContact={() => {
+            const el = document.getElementById('contact');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }}
+          onOpenResume={() => setIsResumeOpen(true)}
+        />
         
-        <Intro />
-        
-        <SelectedWork onSelectProject={(project) => setSelectedProject(project)} />
-        
+        {/* 02: What I Build (5 Concise Capability Cards) */}
         <Capabilities />
         
-        <Process />
+        {/* 03: Featured Case Studies (Octagram Flagship + FOREO Systems) */}
+        <SelectedWork onSelectProject={(project) => setSelectedProject(project)} />
         
+        {/* 04: Experience & Education Timeline */}
         <Experience onOpenResume={() => setIsResumeOpen(true)} />
         
+        {/* 05: Engineering Process (01-05 Lifecycle) */}
+        <Process />
+        
+        {/* 06: Technology Stack (Structured Disciplines) */}
+        <Technology />
+
+        {/* 07: Selected Repositories & Code Proof */}
+        <GithubProof />
+        
+        {/* 08: Context, Career Story & Active Focus */}
         <About />
         
+        {/* 09: Engineering Perspectives & Principles */}
         <Philosophy />
         
-        <Now />
-        
+        {/* 10: Final CTA & Direct Contact */}
         <Contact />
       </main>
 
       {/* Footer */}
       <Footer />
 
-      {/* Modals */}
+      {/* Full Deep-Dive Case Study Modal */}
       {selectedProject && (
         <CaseStudyModal
           project={selectedProject}
@@ -79,6 +92,7 @@ export default function App() {
         />
       )}
 
+      {/* Full Printable / Viewable Résumé Modal */}
       {isResumeOpen && (
         <ResumeModal
           isOpen={isResumeOpen}

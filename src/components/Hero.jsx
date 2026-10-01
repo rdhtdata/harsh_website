@@ -1,50 +1,50 @@
 import React, { useState } from 'react';
-import { ArrowDownRight, ArrowUpRight, Terminal } from 'lucide-react';
+import { ArrowDownRight, ArrowUpRight, Terminal, FileText, Mail } from 'lucide-react';
 
 const systemNodes = [
   {
     id: 'user',
     step: '01',
-    label: 'USER / CLIENT',
+    label: 'INPUT & INGESTION',
     tag: 'INPUT STREAM',
-    desc: 'Multi-channel query, business brief, or triggered webhook payload',
-    spec: 'HTTP POST / REST / Webhook payload'
+    desc: 'Multi-channel query, business brief, API webhook, or scheduled data pipeline trigger',
+    spec: 'HTTP POST / REST / Webhooks'
   },
   {
     id: 'app',
     step: '02',
-    label: 'AI APPLICATION',
-    tag: 'GATEWAY & ORCHESTRATION',
-    desc: 'FastAPI service validating schemas, auth, rate-limits & session state',
+    label: 'FASTAPI GATEWAY',
+    tag: 'ORCHESTRATION',
+    desc: 'Asynchronous service handling schema validation, authentication, rate-limiting & session state',
     spec: 'Python 3.12 · FastAPI · Pydantic v2'
   },
   {
     id: 'agent',
     step: '03',
-    label: 'AGENTS / RAG / TOOLS',
-    tag: 'REASONING LAYER',
-    desc: 'Task decomposition, dense vector retrieval & deterministic tool execution',
-    spec: 'FAISS / Vector Search · LLM APIs · Tool Calling'
+    label: 'REASONING & RAG',
+    tag: 'INTELLIGENCE LAYER',
+    desc: 'Task decomposition, dense vector retrieval (FAISS), tool invocation & structured JSON output',
+    spec: 'FAISS / Vector Search · LLMs · Tool Calling'
   },
   {
     id: 'infra',
     step: '04',
-    label: 'APIs / DATABASE / SERVICES',
-    tag: 'DATA & EXECUTION',
-    desc: 'Relational storage, third-party platform APIs, Dockerized workers & caching',
-    spec: 'PostgreSQL · Redis · Docker · External REST APIs'
+    label: 'DATA & SERVICES',
+    tag: 'EXECUTION LAYER',
+    desc: 'PostgreSQL storage, Redis caching, Playwright browser automation & external API integrations',
+    spec: 'PostgreSQL · Redis · Docker · External APIs'
   },
   {
     id: 'workflow',
     step: '05',
-    label: 'BUSINESS WORKFLOW',
-    tag: 'DEPLOYED OUTCOME',
-    desc: 'Executed business operation, verified ad campaign, or automated CRM update',
-    spec: 'Automated Delivery · Telemetry · Continuous Feedback'
+    label: 'BUSINESS OUTCOME',
+    tag: 'PRODUCTION DELIVERY',
+    desc: 'Executed business operation, published campaign, synchronized CRM record, or client platform delivery',
+    spec: 'Automated Delivery · Telemetry · Monitored Logs'
   }
 ];
 
-export default function Hero({ onOpenContact }) {
+export default function Hero({ onOpenContact, onOpenResume }) {
   const [activeNodeIndex, setActiveNodeIndex] = useState(1);
 
   const scrollToSection = (id) => {
@@ -57,48 +57,45 @@ export default function Hero({ onOpenContact }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           
-          {/* Left Column: Core Positioning & Identity */}
+          {/* Left Column: Core Positioning & Value */}
           <div className="lg:col-span-7 flex flex-col justify-between">
             <div>
-              {/* Eyebrow */}
+              {/* Eyebrow / Production Status */}
               <div className="inline-flex items-center gap-2 px-2.5 sm:px-3 py-1 bg-canvas-card border border-border-subtle rounded-sm text-xs font-mono font-semibold tracking-wider text-ink uppercase mb-5 sm:mb-8">
                 <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                AI SOLUTIONS ENGINEER
+                HARSH TRIPATHI · AI ENGINEER & FOUNDER
               </div>
 
-              {/* Headline */}
-              <h1 className="text-hero font-heading font-bold text-ink leading-[1.05] tracking-tight mb-5 sm:mb-6 break-words">
-                I build AI systems that solve real business problems.
+              {/* Primary Headline */}
+              <h1 className="text-hero font-heading font-bold text-ink leading-[1.06] tracking-tight mb-5 sm:mb-6 break-words">
+                I build and ship AI systems that automate real-world workflows.
               </h1>
 
-              {/* Supporting Text */}
-              <p className="text-base sm:text-lg lg:text-xl text-ink-secondary font-normal leading-relaxed max-w-2xl mb-6 sm:mb-8">
-                I design and ship production-oriented LLM applications, AI automation systems, and backend services — taking ideas from ambiguous requirements to deployed software.
+              {/* Supporting Copy */}
+              <p className="text-base sm:text-lg lg:text-xl text-ink-secondary font-normal leading-relaxed max-w-2xl mb-6 sm:mb-8 font-sans">
+                AI engineer working across LLM applications, agentic workflows, RAG, backend systems and machine learning — from architecture to production deployment.
               </p>
 
-              {/* Core Pillars */}
-              <div className="flex flex-wrap gap-2 sm:gap-2.5 mb-8 sm:mb-10">
-                {[
-                  'AI APPLICATIONS',
-                  'AI AUTOMATION',
-                  'BACKEND SYSTEMS'
-                ].map((pillar) => (
-                  <span
-                    key={pillar}
-                    className="font-mono text-[11px] sm:text-xs font-semibold px-2.5 sm:px-3 py-1 sm:py-1.5 bg-canvas-card border border-border-subtle text-ink rounded-sm"
-                  >
-                    {pillar}
-                  </span>
-                ))}
+              {/* Concise Capability Line */}
+              <div className="font-mono text-xs sm:text-sm font-semibold text-accent mb-6 sm:mb-8 flex flex-wrap items-center gap-x-2 gap-y-1">
+                <span>AI Engineering</span>
+                <span className="text-ink-muted">·</span>
+                <span>Agentic Systems</span>
+                <span className="text-ink-muted">·</span>
+                <span>LLM Applications</span>
+                <span className="text-ink-muted">·</span>
+                <span>Backend</span>
+                <span className="text-ink-muted">·</span>
+                <span>ML</span>
               </div>
 
-              {/* Primary & Secondary CTAs */}
+              {/* Clear Primary CTAs */}
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-8">
                 <button
                   onClick={() => scrollToSection('work')}
                   className="group inline-flex items-center justify-center gap-2 bg-ink text-canvas hover:bg-accent px-5 sm:px-6 py-3.5 rounded-sm font-mono text-xs font-semibold tracking-wider uppercase transition-colors cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
-                  <span>View Selected Work</span>
+                  <span>View My Work</span>
                   <ArrowDownRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5" />
                 </button>
 
@@ -106,7 +103,16 @@ export default function Hero({ onOpenContact }) {
                   onClick={() => scrollToSection('contact')}
                   className="inline-flex items-center justify-center gap-2 bg-canvas-card text-ink hover:text-accent border border-border-subtle hover:border-accent px-5 sm:px-6 py-3.5 rounded-sm font-mono text-xs font-semibold tracking-wider uppercase transition-colors cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
+                  <Mail className="w-3.5 h-3.5" />
                   <span>Get In Touch</span>
+                </button>
+
+                <button
+                  onClick={onOpenResume}
+                  className="inline-flex items-center justify-center gap-1.5 bg-canvas-subtle text-ink-secondary hover:text-ink border border-border-subtle px-4 py-3.5 rounded-sm font-mono text-xs font-semibold tracking-wider uppercase transition-colors cursor-pointer"
+                >
+                  <FileText className="w-3.5 h-3.5" />
+                  <span>Résumé</span>
                 </button>
               </div>
 
@@ -129,22 +135,24 @@ export default function Hero({ onOpenContact }) {
                   LinkedIn <ArrowUpRight className="w-3.5 h-3.5" />
                 </a>
                 <a
-                  href="mailto:rdht.work@gmail.com"
+                  href="https://octagramai.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-ink-secondary hover:text-ink hover:underline"
                 >
-                  Email <ArrowUpRight className="w-3.5 h-3.5" />
+                  Octagram <ArrowUpRight className="w-3.5 h-3.5" />
                 </a>
               </div>
             </div>
 
-            {/* Availability Notice */}
+            {/* Location & Availability Line */}
             <div className="mt-6 sm:mt-8 pt-4 flex items-center gap-2 text-xs font-mono text-ink-secondary">
               <span className="w-2 h-2 rounded-full bg-emerald-600 shrink-0"></span>
-              <span className="leading-snug">Available from October 2026 · Open to remote & onsite roles</span>
+              <span className="leading-snug">Paris / Remote · Available for AI Engineering opportunities</span>
             </div>
           </div>
 
-          {/* Right Column: Interactive System Architecture Visual */}
+          {/* Right Column: Architectural Schematic Visual */}
           <div className="lg:col-span-5 w-full">
             <div className="bg-canvas-card border border-border-subtle rounded-sm p-4 sm:p-6 shadow-xs">
               
@@ -155,8 +163,8 @@ export default function Hero({ onOpenContact }) {
                   <span className="truncate">SYSTEM_ARCHITECTURE.flow</span>
                 </div>
                 <div className="font-mono text-[10px] sm:text-[11px] text-ink-secondary flex items-center gap-1.5 shrink-0">
-                  <span className="w-1.5 h-1.5 rounded-full bg-accent animate-ping"></span>
-                  LIVE_PIPELINE
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                  PRODUCTION_PIPELINE
                 </div>
               </div>
 
@@ -166,7 +174,7 @@ export default function Hero({ onOpenContact }) {
                   const isActive = activeNodeIndex === index;
                   return (
                     <div key={node.id} className="relative">
-                      {/* Connector Line between nodes */}
+                      {/* Connector between nodes */}
                       {index > 0 && (
                         <div className="flex justify-center -my-1 py-1">
                           <div className="w-px h-2.5 bg-border-subtle flex items-center justify-center">
@@ -175,7 +183,7 @@ export default function Hero({ onOpenContact }) {
                         </div>
                       )}
 
-                      {/* Node Box */}
+                      {/* Node Button */}
                       <button
                         type="button"
                         onClick={() => setActiveNodeIndex(index)}
@@ -215,10 +223,10 @@ export default function Hero({ onOpenContact }) {
                 })}
               </div>
 
-              {/* Footnote about system design */}
+              {/* Footnote */}
               <div className="mt-4 sm:mt-5 pt-3 sm:pt-4 border-t border-border-subtle flex flex-wrap items-center justify-between gap-2 text-[10px] sm:text-[11px] font-mono text-ink-secondary">
-                <span>SYSTEM · DEPLOYMENT</span>
-                <span className="text-ink font-medium">FASTAPI / DOCKER</span>
+                <span>PRODUCTION ARCHITECTURE</span>
+                <span className="text-ink font-semibold">FASTAPI · AGENTS · DOCKER</span>
               </div>
             </div>
           </div>

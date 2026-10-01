@@ -17,9 +17,10 @@ export default function Navbar({ currentTheme, onToggleTheme, onOpenResume }) {
 
   const navLinks = [
     { name: 'WORK', href: '#work' },
-    { name: 'WHAT I BUILD', href: '#capabilities' },
-    { name: 'PROCESS', href: '#process' },
+    { name: 'CAPABILITIES', href: '#capabilities' },
     { name: 'EXPERIENCE', href: '#experience' },
+    { name: 'PROCESS', href: '#process' },
+    { name: 'TECH', href: '#technology' },
     { name: 'ABOUT', href: '#about' },
     { name: 'CONTACT', href: '#contact' },
   ];
@@ -38,7 +39,7 @@ export default function Navbar({ currentTheme, onToggleTheme, onOpenResume }) {
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-200 ${
         scrolled
           ? 'bg-canvas/90 backdrop-blur-md border-b border-border-subtle py-3.5 shadow-xs'
-          : 'bg-canvas border-b border-transparent py-5'
+          : 'bg-canvas border-b border-transparent py-4 sm:py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between">
@@ -56,8 +57,8 @@ export default function Navbar({ currentTheme, onToggleTheme, onOpenResume }) {
         </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-7">
-          <nav className="flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-6">
+          <nav className="flex items-center gap-5">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -73,7 +74,7 @@ export default function Navbar({ currentTheme, onToggleTheme, onOpenResume }) {
           <div className="h-4 w-px bg-border-subtle" aria-hidden="true" />
 
           {/* Availability Pill */}
-          <div className="flex items-center gap-2 px-3 py-1 bg-canvas-card border border-border-subtle rounded-full shadow-xs">
+          <div className="flex items-center gap-2 px-2.5 py-1 bg-canvas-card border border-border-subtle rounded-full shadow-xs">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
@@ -113,8 +114,8 @@ export default function Navbar({ currentTheme, onToggleTheme, onOpenResume }) {
           </button>
         </div>
 
-        {/* Mobile Actions */}
-        <div className="flex items-center gap-2.5 md:hidden">
+        {/* Medium and Mobile Navigation */}
+        <div className="flex items-center gap-2.5 lg:hidden">
           {/* Mobile Theme Toggle */}
           <button
             onClick={onToggleTheme}
@@ -129,6 +130,7 @@ export default function Navbar({ currentTheme, onToggleTheme, onOpenResume }) {
             <span className="h-1.5 w-1.5 rounded-full bg-accent"></span>
             OCT '26
           </div>
+          
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2 text-ink hover:text-accent border border-border-subtle rounded bg-canvas-card focus:outline-none focus-visible:ring-2 focus-visible:ring-accent cursor-pointer"
@@ -142,8 +144,8 @@ export default function Navbar({ currentTheme, onToggleTheme, onOpenResume }) {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-canvas border-b border-border-subtle px-6 py-6 shadow-lg animate-in fade-in slide-in-from-top-4 duration-200">
-          <nav className="flex flex-col gap-4">
+        <div className="lg:hidden bg-canvas border-b border-border-subtle px-6 py-6 shadow-lg animate-in fade-in slide-in-from-top-4 duration-200">
+          <nav className="flex flex-col gap-3">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -154,7 +156,7 @@ export default function Navbar({ currentTheme, onToggleTheme, onOpenResume }) {
                 {link.name}
               </a>
             ))}
-            <div className="pt-2 flex items-center justify-between">
+            <div className="pt-3 flex items-center justify-between">
               <button
                 onClick={onToggleTheme}
                 className="flex items-center gap-1.5 font-mono text-xs font-medium text-ink bg-canvas-card border border-border-subtle px-3 py-1.5 rounded"

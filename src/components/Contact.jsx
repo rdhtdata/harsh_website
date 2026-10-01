@@ -37,13 +37,13 @@ export default function Contact() {
         {/* Section Header */}
         <div className="mb-12 sm:mb-16 pb-6 border-b border-border-subtle">
           <span className="font-mono text-xs font-semibold tracking-wider text-ink-secondary uppercase block mb-3">
-            07 / DIRECT CONTACT
+            09 / DIRECT CONTACT
           </span>
           <h2 className="text-section-title font-heading font-bold text-ink tracking-tight mb-3 sm:mb-4 break-words">
             Let's build something useful.
           </h2>
-          <p className="text-sm sm:text-lg md:text-xl text-ink-secondary font-normal leading-relaxed max-w-2xl font-sans">
-            I'm open to AI engineering roles, technical collaborations and interesting problems.
+          <p className="text-base sm:text-lg md:text-xl text-ink-secondary font-normal leading-relaxed max-w-2xl font-sans">
+            I'm interested in AI engineering opportunities where I can work on real products, intelligent systems and production infrastructure.
           </p>
         </div>
 
@@ -55,9 +55,9 @@ export default function Contact() {
               <div className="flex items-center justify-between pb-3.5 sm:pb-4 mb-4 sm:mb-6 border-b border-border-subtle">
                 <span className="font-mono text-xs font-bold text-ink uppercase tracking-wider flex items-center gap-2">
                   <Mail className="w-4 h-4 text-accent" />
-                  PRIMARY INBOX
+                  DIRECT INBOX
                 </span>
-                <span className="font-mono text-[10px] sm:text-[11px] text-ink-secondary">RESPONSE TIME &lt; 24H</span>
+                <span className="font-mono text-[10px] sm:text-[11px] text-ink-secondary">RESPONSE &lt; 24H</span>
               </div>
 
               <div className="space-y-2 sm:space-y-3">
@@ -70,10 +70,10 @@ export default function Contact() {
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-5 sm:pt-6 border-t border-border-subtle">
               <a
-                href={`mailto:${email}?subject=AI%20Engineering%20Collaboration`}
+                href={`mailto:${email}?subject=AI%20Engineering%20Opportunity%20/%20Inquiry`}
                 className="inline-flex items-center justify-center gap-2 bg-ink hover:bg-accent text-canvas px-5 sm:px-6 py-3 rounded-sm font-mono text-xs font-semibold tracking-wider uppercase transition-colors"
               >
-                <span>Compose Message</span>
+                <span>Email Me</span>
                 <ArrowUpRight className="w-4 h-4" />
               </a>
 
@@ -102,10 +102,10 @@ export default function Contact() {
             {/* Online Profiles */}
             <div className="bg-canvas-card border border-border-subtle p-5 sm:p-6 rounded-sm space-y-3.5 sm:space-y-4">
               <span className="font-mono text-xs font-bold text-ink uppercase tracking-wider block pb-3 border-b border-border-subtle">
-                CHANNELS & NETWORKS
+                PROFILES & CHANNELS
               </span>
 
-              <div className="space-y-2.5 sm:space-y-3 font-mono text-xs">
+              <div className="space-y-2.5 font-mono text-xs">
                 <a
                   href={linkedin}
                   target="_blank"
@@ -160,7 +160,7 @@ export default function Contact() {
                     AVAILABILITY
                   </div>
                   <span className="font-semibold text-accent block">October 2026</span>
-                  <span className="text-[11px] text-ink-secondary font-sans">Full-time roles</span>
+                  <span className="text-[11px] text-ink-secondary font-sans">AI Engineering roles</span>
                 </div>
               </div>
             </div>

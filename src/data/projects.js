@@ -1,27 +1,120 @@
 export const projects = [
   {
-    id: "foreo-ad-platform",
+    id: "octagram",
     number: "01",
     flagship: true,
+    title: "OCTAGRAM",
+    subtitle: "AI-Powered Business Automation Platform",
+    organization: "Octagram AI",
+    role: "Founder & Technical Lead",
+    period: "2026 — Present",
+    badge: "PRODUCTION · 6+ CLIENTS",
+    highlight: "6+ signed clients",
+    url: "https://octagramai.com",
+    summary: "Founded and technically led a technology company building digital platforms, autonomous AI automation engines and business software for commercial clients.",
+    problem: "Growing service businesses lose hundreds of operational hours to fragmented manual workflows across prospect research, lead qualification, outreach dispatch, CRM synchronization, and client portal delivery. Off-the-shelf SaaS tools rarely integrate cleanly without heavy manual data entry.",
+    whatIBuilt: [
+      "End-to-end autonomous business automation engine connecting web scrapers, LLM evaluators, and CRM APIs.",
+      "Custom web platforms and interactive client portals built on React/Next.js with clean API backends.",
+      "Multi-step lead qualification and contextual outreach generation pipelines.",
+      "Two-way webhook synchronization layers for automated CRM updates and notification routing."
+    ],
+    myContribution: [
+      "Designed the full system architecture from database schemas and API contracts to async queue workers.",
+      "Engineered autonomous browser agents using Playwright and Python backend services with FastAPI.",
+      "Implemented LLM reasoning pipelines for automated lead scoring against ideal client profiles.",
+      "Delivered and deployed production systems across 6+ commercial clients."
+    ],
+    technology: [
+      "Python",
+      "FastAPI",
+      "Playwright",
+      "PostgreSQL",
+      "Redis",
+      "React",
+      "Docker"
+    ],
+    workflow: [
+      { id: "discovery", label: "BUSINESS DISCOVERY", desc: "Automated search queries across niche industry datasets" },
+      { id: "research", label: "AI RESEARCH", desc: "Deep extraction of company profiles, tech stacks, and contacts" },
+      { id: "qualification", label: "LEAD QUALIFICATION", desc: "LLM filtering against ideal client profile parameters" },
+      { id: "outreach", label: "OUTREACH", desc: "Contextual, grounded message generation & scheduling" },
+      { id: "crm", label: "CRM SYNC", desc: "Automated record synchronization and deal pipeline routing" },
+      { id: "software", label: "WEBSITE / SOFTWARE", desc: "Custom web applications and interactive client portals" },
+      { id: "delivery", label: "CLIENT DELIVERY", desc: "Automated onboarding, validation, and multi-stage execution" }
+    ],
+    caseStudy: {
+      problem: "Service businesses and growing companies frequently operate with disjointed manual processes for prospect discovery, research, outreach, CRM record keeping, and customer onboarding. Off-the-shelf tools often fail to integrate cleanly or require dedicated human operators for repetitive data entry.",
+      approach: "Designed bespoke automation engines combining custom browser agents, API connectors, LLM reasoning pipelines, and robust backend services to streamline business processes end-to-end.",
+      architectureDetails: [
+        {
+          layer: "1. Data Discovery & Extraction Engine",
+          description: "Targeted browser automation (Playwright) and verified API integrations extracting structured lead and business records."
+        },
+        {
+          layer: "2. Intelligent Qualification Pipeline",
+          description: "Task-specific LLM agents evaluating prospects against ICP criteria and generating structured qualification dossiers."
+        },
+        {
+          layer: "3. Multi-Channel Outreach Dispatch",
+          description: "API-integrated communication sequences with dynamic, context-grounded personalization and delivery scheduling."
+        },
+        {
+          layer: "4. CRM & Database Synchronization",
+          description: "Two-way webhook and REST synchronization with HubSpot, Notion, and relational PostgreSQL databases."
+        },
+        {
+          layer: "5. Client Platform & Delivery Layer",
+          description: "Custom web software and interactive client portals built on React/Next.js with clean API backends."
+        }
+      ],
+      myRole: "Founder & Technical Lead. Owned technical architecture, engineered end-to-end backend pipelines, built custom AI agents, integrated external APIs, and worked directly with 6+ clients to deploy production systems.",
+      techStackDetails: {
+        backend: "Python, FastAPI, Celery, PostgreSQL, Redis",
+        automation: "Playwright, Webhooks, REST APIs, Tool Calling",
+        frontend: "React, Next.js, Tailwind CSS",
+        infrastructure: "Docker, Cloud VPS, Linux"
+      },
+      outcome: "Built and deployed custom AI automation and web systems across 6+ client organizations, eliminating manual data entry hours and streamlining operational business pipelines."
+    }
+  },
+  {
+    id: "foreo-ad-platform",
+    number: "02",
+    flagship: true,
     title: "AI-POWERED ADVERTISING OPERATIONS",
-    subtitle: "End-to-end digital advertising automation & agentic workflows",
+    subtitle: "Automated Campaign Planning, Creative Workflows & Publishing",
     organization: "FOREO",
     role: "AI Contract Engineer",
-    focus: "AI Agents · LLM Workflows · RAG · APIs · Automation · Backend",
+    period: "2026 — Present",
+    badge: "PRODUCTION · CLIENT",
     summary: "An AI-powered platform designed to automate the lifecycle of digital advertising operations — from campaign planning and product data processing to creative workflows, publishing, monitoring and optimisation.",
+    problem: "Digital advertising operations across international consumer product lines involve repetitive, fragmented manual workflows across campaign briefing, creative asset structuring, catalog sync, and channel-by-channel ad launch. Ad teams spend significant operational hours translating campaign goals into ad variations and monitoring distributed platform dashboards.",
+    whatIBuilt: [
+      "Modular AI pipeline with dedicated task-specific agents orchestrated via FastAPI backend services.",
+      "Vector search (RAG) retrieval layer maintaining strict compliance with product catalogs and brand guidelines.",
+      "Multimodal creative processing pipeline automating ad copy variations and visual asset validation.",
+      "Containerized microservices connecting directly to ad platform APIs for automated publishing and telemetry."
+    ],
+    myContribution: [
+      "Architected the agentic reasoning layer and prompt orchestration pipelines for multi-channel ad lifecycles.",
+      "Engineered high-throughput FastAPI REST APIs, schema validation with Pydantic, and PostgreSQL database models.",
+      "Integrated multimodal AI models with internal product catalogs and brand knowledge bases.",
+      "Containerized backend services with Docker and set up automated integration testing."
+    ],
     technology: [
       "Python",
       "FastAPI",
       "Docker",
       "Vector Search",
       "Multimodal AI",
-      "REST APIs",
-      "PostgreSQL"
+      "PostgreSQL",
+      "Redis"
     ],
     workflow: [
-      { id: "brief", label: "CAMPAIGN BRIEF", desc: "Ingestion of strategic creative targets and objectives" },
+      { id: "brief", label: "CAMPAIGN BRIEF", desc: "Structured parsing of marketing briefs & target demographics" },
       { id: "planning", label: "AI PLANNING", desc: "LLM agents decompose targets into actionable channels" },
-      { id: "data", label: "PRODUCT / DATA PROCESSING", desc: "Automated catalog enrichment & multimodal asset parsing" },
+      { id: "data", label: "CATALOG / DATA SYNC", desc: "Automated catalog enrichment & multimodal asset parsing" },
       { id: "creative", label: "CREATIVE WORKFLOW", desc: "Generation, copy alignment, and brand guideline checking" },
       { id: "publishing", label: "CAMPAIGN PUBLISHING", desc: "API connectors push live assets directly to platforms" },
       { id: "monitoring", label: "MONITORING", desc: "Real-time telemetry ingestion and performance tracking" },
@@ -52,7 +145,7 @@ export const projects = [
           description: "Automated data polling that surfaces performance metrics back into the decision layer for iterative adjustments."
         }
       ],
-      myRole: "Served as AI Contract Engineer, architecting and building the core LLM pipelines, autonomous agent workflows, backend FastAPI services, vector search integration, and containerized deployment environments.",
+      myRole: "AI Contract Engineer. Architected and built core LLM pipelines, autonomous agent workflows, backend FastAPI services, vector search integration, and containerized deployment environments.",
       techStackDetails: {
         backend: "Python, FastAPI, Pydantic, SQLAlchemy",
         ai: "OpenAI API, Multimodal Models, Vector Search, LangChain / Custom Agents",
@@ -63,91 +156,44 @@ export const projects = [
     }
   },
   {
-    id: "octagram",
-    number: "02",
-    flagship: false,
-    title: "OCTAGRAM",
-    subtitle: "AI-POWERED BUSINESS AUTOMATION",
-    organization: "Octagram AI",
-    role: "Founder & Technical Lead",
-    focus: "Digital Platforms · AI Automation · CRM Workflows · Lead Systems",
-    summary: "Founded and technically led a technology company building digital platforms, AI automation systems and business software for businesses.",
-    highlight: "6+ signed clients",
-    url: "https://octagramai.com",
-    technology: [
-      "Python",
-      "FastAPI",
-      "AI Agents",
-      "Browser Automation",
-      "CRM APIs",
-      "Next.js/React",
-      "PostgreSQL"
-    ],
-    workflow: [
-      { id: "discovery", label: "LEAD DISCOVERY", desc: "Automated search queries across niche industry datasets" },
-      { id: "research", label: "RESEARCH", desc: "Deep extraction of company info, tech stacks, and contacts" },
-      { id: "qualification", label: "QUALIFICATION", desc: "LLM filtering against ideal client profile parameters" },
-      { id: "outreach", label: "OUTREACH", desc: "Personalized contextual message generation" },
-      { id: "crm", label: "CRM", desc: "Automated record synchronization and deal pipeline routing" },
-      { id: "software", label: "WEBSITE / SOFTWARE", desc: "Custom web applications and interactive client portals" },
-      { id: "followup", label: "FOLLOW-UP", desc: "Automated multi-stage trigger-based engagement" }
-    ],
-    caseStudy: {
-      problem: "Service businesses and growing companies frequently operate with disjointed manual processes for prospect discovery, research, outreach, CRM record keeping, and customer onboarding. Off-the-shelf tools often fail to integrate cleanly or require dedicated human operators for repetitive data entry.",
-      approach: "Designed bespoke automation engines combining custom browser agents, API connectors, LLM reasoning pipelines, and robust backend services to streamline business processes end-to-end.",
-      architectureDetails: [
-        {
-          layer: "1. Data Discovery & Extraction",
-          description: "Targeted scrapers and verified dataset integrations extracting structured lead records."
-        },
-        {
-          layer: "2. Intelligent Qualification Engine",
-          description: "LLM agents scoring prospects against ICP criteria and generating contextual dossier summaries."
-        },
-        {
-          layer: "3. Multi-Channel Outreach Dispatch",
-          description: "API-integrated email and messaging sequences with dynamic, context-grounded personalization."
-        },
-        {
-          layer: "4. CRM & Database Synchronization",
-          description: "Two-way webhook synchronization with HubSpot, Notion, and relational PostgreSQL stores."
-        }
-      ],
-      myRole: "Founder and Technical Lead. Led architectural design, engineered the end-to-end backend pipelines, built custom AI agents, integrated third-party APIs, and worked directly with 6+ clients to deploy production systems.",
-      techStackDetails: {
-        backend: "Python, FastAPI, Celery, PostgreSQL",
-        automation: "Playwright, Webhooks, REST APIs, LangChain",
-        frontend: "React, Next.js, Tailwind CSS",
-        infra: "Docker, Cloud VPS, Redis"
-      },
-      outcome: "Built and deployed custom AI automation and web systems across 6+ client organizations, eliminating manual data entry hours and streamlining operational lead pipelines."
-    }
-  },
-  {
     id: "multimodal-rag",
     number: "03",
     flagship: false,
     title: "MULTIMODAL AI / RAG SYSTEM",
-    subtitle: "Grounded visual & textual retrieval with local/cloud LLMs",
-    organization: "Engineering Project / FOREO",
+    subtitle: "Grounded Visual & Textual Retrieval with Local and Cloud LLMs",
+    organization: "FOREO",
     role: "AI Intern · Team Lead",
-    focus: "Vector Search · Embeddings · Multimodal Ingestion · Ollama · FAISS",
-    summary: "A multimodal AI application combining image classification, retrieval and LLM-generated responses grounded in structured knowledge bases.",
+    period: "2025 — 2026",
+    badge: "PRODUCTION · TEAM LEAD",
+    summary: "A multimodal AI application combining image classification, dense vector retrieval and LLM-generated responses grounded in structured knowledge bases.",
+    problem: "Standard text-only RAG pipelines fail when domain knowledge relies heavily on visual diagrams, physical product inspections, and multi-format technical documentation.",
+    whatIBuilt: [
+      "Dual-stream ingestion pipeline extracting joint visual and textual embeddings into FAISS.",
+      "Hybrid similarity search matching query images and text against technical reference datasets.",
+      "FastAPI service orchestrating prompt context synthesis with local (Ollama) and cloud LLM APIs.",
+      "Containerized inference service with strict validation against hallucinations."
+    ],
+    myContribution: [
+      "Led a team of 4 engineers through sprints covering data preprocessing, embedding design, and service integration.",
+      "Implemented CLIP-based visual feature extraction and FAISS dense vector indexing.",
+      "Built FastAPI middleware to assemble grounded prompts with citation metadata.",
+      "Configured containerized deployments supporting Ollama for on-premises inference."
+    ],
     technology: [
       "Python",
       "FastAPI",
       "FAISS",
-      "Embeddings",
-      "LLMs",
+      "CLIP",
+      "Ollama",
       "Docker",
-      "Ollama"
+      "PyTorch"
     ],
     workflow: [
-      { id: "input", label: "IMAGE + USER QUERY", desc: "Multimodal user input with visual and textual context" },
-      { id: "vision", label: "IMAGE MODEL + RETRIEVAL", desc: "Visual embedding extraction & classification" },
-      { id: "vector", label: "VECTOR SEARCH", desc: "Similarity matching across FAISS index knowledge" },
-      { id: "llm", label: "LLM REASONING", desc: "Context injection into local / API model prompts" },
-      { id: "grounded", label: "GROUNDED RESPONSE", desc: "Hallucination-checked, cited technical response" }
+      { id: "input", label: "IMAGE + QUERY", desc: "Multimodal user input with visual and textual context" },
+      { id: "vision", label: "IMAGE EMBEDDING", desc: "Visual feature extraction & classification via CLIP" },
+      { id: "vector", label: "FAISS SEARCH", desc: "Sub-second similarity matching across indexed knowledge base" },
+      { id: "llm", label: "LLM REASONING", desc: "Context injection into local (Ollama) / cloud LLM prompts" },
+      { id: "grounded", label: "VERIFIED RESPONSE", desc: "Hallucination-checked, cited technical response" }
     ],
     caseStudy: {
       problem: "Standard text-only RAG pipelines fail when domain knowledge relies heavily on visual diagrams, physical product inspections, and multi-format technical documentation.",
@@ -184,26 +230,41 @@ export const projects = [
     number: "04",
     flagship: false,
     title: "INFLUENCER ROI PREDICTION",
-    subtitle: "Predictive ML pipeline for multi-platform marketing analytics",
+    subtitle: "Predictive ML Pipeline for Multi-Platform Marketing Analytics",
     organization: "FOREO / Analytics Research",
     role: "ML & Backend Developer",
-    focus: "Predictive Modeling · Feature Engineering · Data Pipelines · SQL",
-    summary: "An ML system using multi-platform business data to estimate influencer performance and support marketing decision-making.",
+    period: "2025",
+    badge: "PRODUCTION · ML SYSTEM",
+    summary: "An ML system using multi-platform business data to estimate creator performance and support marketing decision-making.",
+    problem: "Marketing teams frequently allocate substantial advertising spend to creator partnerships based on vanity metrics like follower count, leading to high variability in actual commercial ROI.",
+    whatIBuilt: [
+      "SQL data extraction and ETL pipeline aggregating historical campaign logs and conversion attributions.",
+      "Feature engineering module computing engagement velocity, audience authentic interaction ratios, and category affinity.",
+      "Supervised Scikit-learn regression and gradient-boosting models predicting revenue intervals.",
+      "FastAPI endpoint serving real-time ROI forecasts and confidence intervals to decision dashboards."
+    ],
+    myContribution: [
+      "Designed and authored SQL aggregation queries across historical multi-platform marketing datasets.",
+      "Built feature extraction pipelines in Python using Pandas and NumPy.",
+      "Trained and evaluated Scikit-learn regression models using cross-validation.",
+      "Created containerized FastAPI inference endpoint returning structured JSON predictions."
+    ],
     technology: [
       "Python",
+      "Scikit-learn",
       "Pandas",
       "NumPy",
-      "Scikit-learn",
       "SQL",
-      "FastAPI"
+      "FastAPI",
+      "PostgreSQL"
     ],
     workflow: [
       { id: "data", label: "MULTI-PLATFORM DATA", desc: "Historical campaign metrics, engagements, and sales logs" },
-      { id: "processing", label: "PROCESSING", desc: "Deduplication, normalization, and missing value imputation" },
-      { id: "features", label: "FEATURE ENGINEERING", desc: "Audience quality scores, velocity, and category affinity" },
+      { id: "processing", label: "ETL & CLEANING", desc: "Deduplication, normalization, and missing value imputation" },
+      { id: "features", label: "FEATURE PIPELINE", desc: "Audience quality scores, velocity, and category affinity" },
       { id: "model", label: "ML MODEL", desc: "Trained gradient boosting & regression models" },
-      { id: "prediction", label: "PREDICTION", desc: "Expected conversion rates and revenue interval forecasts" },
-      { id: "decision", label: "DECISION SUPPORT", desc: "API serving structured recommendations to media buyers" }
+      { id: "prediction", label: "ROI FORECAST", desc: "Expected conversion rates and revenue interval forecasts" },
+      { id: "decision", label: "DECISION API", desc: "FastAPI endpoint delivering predictions to media planners" }
     ],
     caseStudy: {
       problem: "Marketing teams frequently allocate substantial advertising spend to creator partnerships based on vanity metrics like follower count, leading to high variability in actual commercial ROI.",
@@ -234,5 +295,32 @@ export const projects = [
       },
       outcome: "Implemented an empirical scoring framework providing media planners with quantifiable revenue estimations prior to campaign investment."
     }
+  }
+];
+
+export const selectedRepositories = [
+  {
+    name: "ai-ad-operations-orchestrator",
+    description: "Multi-agent orchestration service automating campaign briefing, RAG catalog enrichment, and API publishing.",
+    tech: ["Python", "FastAPI", "Vector Search", "Docker"],
+    demonstrates: "Async microservices, state machines, and multi-channel API connectors."
+  },
+  {
+    name: "multimodal-rag-faiss",
+    description: "Dual-stream visual and textual document retrieval engine using CLIP embeddings and local/cloud LLMs.",
+    tech: ["Python", "FAISS", "CLIP", "Ollama", "FastAPI"],
+    demonstrates: "Joint multimodal vector indexing, citation grounding, and local inference fallback."
+  },
+  {
+    name: "influencer-roi-ml-service",
+    description: "Supervised ML pipeline predicting creator conversion rates and ROI intervals from multi-platform data.",
+    tech: ["Python", "Scikit-learn", "Pandas", "SQL", "FastAPI"],
+    demonstrates: "Feature engineering pipelines, model validation, and production API serving."
+  },
+  {
+    name: "enterprise-agent-workflows",
+    description: "Autonomous browser and API automation engines for lead discovery, CRM sync, and client delivery.",
+    tech: ["Python", "Playwright", "FastAPI", "Redis", "Celery"],
+    demonstrates: "Robust browser automation, retry policies, and webhook synchronization."
   }
 ];

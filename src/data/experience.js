@@ -1,27 +1,128 @@
-export const experience = [
+export const capabilities = [
   {
-    period: "2026 — PRESENT",
-    company: "FOREO",
-    location: "Paris / Remote",
-    role: "AI Contract Engineer",
-    description: "Building AI-powered advertising operations, agentic workflows, backend services, integrations and automation systems.",
-    highlights: [
-      "Architected autonomous agent pipelines for multi-channel advertising lifecycles.",
-      "Developed high-throughput FastAPI backend microservices and vector search retrieval.",
-      "Integrated multimodal AI models with internal product catalogs and brand knowledge bases."
-    ]
+    number: "01",
+    category: "AI AGENTS",
+    tagline: "Systems that reason, use tools and execute multi-step workflows.",
+    description: "Autonomous agent architectures built with task decomposition, deterministic tool invocation, state management, and reliable fallback policies.",
+    tech: ["Tool Calling", "Autonomous Loops", "State Machines", "LangChain", "Agentic Workflows"],
+    icon: "Cpu"
   },
+  {
+    number: "02",
+    category: "LLM APPLICATIONS",
+    tagline: "Production applications using structured generation, retrieval and tool use.",
+    description: "Enterprise generative systems with schema-enforced JSON validation, dense vector RAG pipelines, and grounded context injection.",
+    tech: ["RAG", "Embeddings", "Structured Output", "Prompt Orchestration", "Multimodal AI"],
+    icon: "Workflow"
+  },
+  {
+    number: "03",
+    category: "AI AUTOMATION",
+    tagline: "AI systems connected to APIs, browsers, databases and business workflows.",
+    description: "End-to-end automation connecting browser interactions, CRM records, webhook events, and back-office pipelines into reliable business engines.",
+    tech: ["Playwright", "Webhooks", "CRM Sync", "Async Queues", "Browser Automation"],
+    icon: "Workflow"
+  },
+  {
+    number: "04",
+    category: "BACKEND SYSTEMS",
+    tagline: "FastAPI services, APIs, databases, asynchronous workflows and containerized deployments.",
+    description: "High-throughput asynchronous microservices built to handle production traffic, orchestrate long-running inference jobs, and maintain data consistency.",
+    tech: ["Python", "FastAPI", "PostgreSQL", "Redis", "Docker", "REST APIs", "Pydantic"],
+    icon: "Server"
+  },
+  {
+    number: "05",
+    category: "MACHINE LEARNING",
+    tagline: "Predictive models, feature engineering, data pipelines and applied ML systems.",
+    description: "Applied machine learning workflows spanning SQL data extraction, statistical feature engineering, and supervised predictive model training.",
+    tech: ["Python", "Scikit-learn", "SQL", "Pandas", "NumPy", "Feature Pipelines"],
+    icon: "Database"
+  }
+];
+
+export const techDisciplines = [
+  {
+    category: "AI / ML",
+    description: "Model reasoning, retrieval-augmented generation & predictive analytics.",
+    skills: ["Python", "PyTorch", "Scikit-learn", "LLMs", "RAG", "Embeddings", "Computer Vision"]
+  },
+  {
+    category: "BACKEND",
+    description: "High-throughput asynchronous services, relational persistence & caching.",
+    skills: ["FastAPI", "REST APIs", "PostgreSQL", "Redis", "Docker", "Pydantic", "SQLAlchemy"]
+  },
+  {
+    category: "AI INFRASTRUCTURE",
+    description: "Dense vector indexing, local model inference & containerized serving.",
+    skills: ["FAISS", "Ollama", "Vector Databases", "Model Serving", "Uvicorn"]
+  },
+  {
+    category: "DEVELOPMENT & OPS",
+    description: "Reliable version control, automated pipelines & containerized Linux deployments.",
+    skills: ["Git", "GitHub", "Linux", "Docker", "CI/CD", "PyTest"]
+  }
+];
+
+export const processStages = [
+  {
+    step: "01",
+    title: "UNDERSTAND",
+    subtitle: "Turn business problem into measurable technical requirements",
+    description: "Deconstruct the core operational constraint. Isolate where AI provides real leverage versus where deterministic software logic is superior."
+  },
+  {
+    step: "02",
+    title: "DESIGN",
+    subtitle: "Architecture before implementation",
+    description: "Define architecture, data flows, APIs and failure modes before writing code. Specify schema contracts, latency budgets, and fallback mechanisms."
+  },
+  {
+    step: "03",
+    title: "BUILD",
+    subtitle: "Modular systems with clear interfaces and validation",
+    description: "Develop modular services with robust error-handling, schema validation, and inspectable logging across agentic reasoning paths."
+  },
+  {
+    step: "04",
+    title: "DEPLOY",
+    subtitle: "Containerize, integrate, monitor and validate production behaviour",
+    description: "Package services into isolated Docker containers with automated healthchecks, environment security, and verified external API connectivity."
+  },
+  {
+    step: "05",
+    title: "ITERATE",
+    subtitle: "Feedback-driven refinement",
+    description: "Use real usage telemetry and system feedback to improve the product. Optimize vector retrieval, prompt precision, and query performance based on live demand."
+  }
+];
+
+export const experience = [
   {
     period: "2026 — PRESENT",
     company: "OCTAGRAM",
     location: "Remote",
     role: "Founder & Technical Lead",
-    badge: "6+ signed clients",
-    description: "Founded and lead a technology company building digital platforms, AI automation systems and business software.",
+    badge: "PRODUCTION",
+    highlight: "6+ signed clients",
+    description: "Founded and technically lead a technology company building digital platforms, AI automation systems and business software for commercial clients.",
     highlights: [
-      "Deployed custom AI agents and browser automation engines for enterprise client workflows.",
-      "Delivered end-to-end web applications, CRM automations, and data ingestion pipelines.",
-      "Worked directly with business stakeholders from problem definition through production launch."
+      "Engineered autonomous browser agents and API automation pipelines delivering end-to-end client workflows.",
+      "Built custom web software, client portals, and CRM synchronization backends with FastAPI and React/Next.js.",
+      "Directed technical architecture from initial business discovery to live production deployment across 6+ clients."
+    ]
+  },
+  {
+    period: "2026 — PRESENT",
+    company: "FOREO",
+    location: "Paris / Remote",
+    role: "AI Contract Engineer",
+    badge: "PRODUCTION · CLIENT",
+    description: "Building AI-powered advertising operations, agentic workflows, backend services, integrations and automation systems.",
+    highlights: [
+      "Architected autonomous agent pipelines automating multi-channel digital advertising lifecycles.",
+      "Developed high-throughput FastAPI backend services, schema validation with Pydantic, and vector search retrieval.",
+      "Integrated multimodal AI models with internal product catalogs and brand knowledge bases."
     ]
   },
   {
@@ -29,11 +130,12 @@ export const experience = [
     company: "FOREO",
     location: "Paris, France",
     role: "AI Intern · Team Lead",
+    badge: "PRODUCTION",
     description: "Led a team of four engineers building multimodal AI applications, RAG systems, backend services and ML workflows.",
     highlights: [
-      "Directed team sprints on computer vision models and FAISS-based vector search pipelines.",
-      "Engineered containerized Python services and REST APIs for internal tooling.",
-      "Spearheaded multimodal document grounding systems using local and cloud LLMs."
+      "Directed sprint deliverables covering computer vision feature extraction and FAISS-based vector search pipelines.",
+      "Engineered containerized Python microservices and REST APIs for internal operations tooling.",
+      "Spearheaded multimodal document grounding systems using local (Ollama) and cloud LLM APIs."
     ]
   },
   {
@@ -41,11 +143,12 @@ export const experience = [
     company: "TRAINITY",
     location: "Bangalore, India",
     role: "Data Analyst Intern",
+    badge: "INTERNSHIP",
     description: "Business analytics, automated reporting, data processing and SQL/Python workflows.",
     highlights: [
-      "Authored optimized SQL queries for extracting key business performance indicators.",
+      "Authored optimized SQL queries for extracting key business performance indicators across operational databases.",
       "Built automated data cleaning scripts in Python using Pandas and NumPy.",
-      "Structured executive dashboards communicating operational metric anomalies."
+      "Structured executive reporting communicating operational metric anomalies and trends."
     ]
   },
   {
@@ -53,6 +156,7 @@ export const experience = [
     company: "ATIC-FRANCE",
     location: "Paris, France",
     role: "Co-founder / AI Developer",
+    badge: "EARLY VENTURE",
     description: "NLP pipelines for speech-to-text extraction and automated video summarisation.",
     highlights: [
       "Implemented automated transcription pipelines using speech-to-text NLP models.",
@@ -75,74 +179,6 @@ export const education = [
     period: "Credential",
     details: "Specialized in Python, Machine Learning, Data Analysis, and Statistical Modeling",
     focus: "Applied Data Science, Machine Learning Models, SQL & Data Pipelines"
-  }
-];
-
-export const capabilities = [
-  {
-    number: "01",
-    category: "AI APPLICATIONS",
-    tagline: "LLM-powered applications designed around real workflows.",
-    description: "Production-grade generative systems built with prompt orchestration, structured validation, grounded context retrieval, and deterministic tool execution.",
-    tech: ["LLMs", "RAG", "Agents", "Tool Calling", "Multimodal AI", "Ollama", "FAISS", "Embeddings"],
-    icon: "Cpu"
-  },
-  {
-    number: "02",
-    category: "AUTOMATION",
-    tagline: "Systems that automate repetitive operational processes.",
-    description: "Autonomous task execution connecting web interfaces, CRM databases, communication channels, and back-office operations into reliable workflows.",
-    tech: ["Agents", "APIs", "Browser Automation", "Workflow Automation", "Playwright", "Webhooks", "Queues"],
-    icon: "Workflow"
-  },
-  {
-    number: "03",
-    category: "BACKEND",
-    tagline: "Production-oriented services connecting AI models with applications and data.",
-    description: "Robust, asynchronous API layers and microservices built to withstand production traffic, handle long-running inference jobs, and maintain data integrity.",
-    tech: ["Python", "FastAPI", "PostgreSQL", "Docker", "REST APIs", "Redis", "SQLAlchemy", "Pydantic"],
-    icon: "Server"
-  },
-  {
-    number: "04",
-    category: "DATA & ML",
-    tagline: "Data pipelines and machine-learning systems for prediction and decision support.",
-    description: "End-to-end data processing pipelines, statistical feature extraction, and supervised ML models designed to turn business telemetry into actionable decisions.",
-    tech: ["Python", "SQL", "Pandas", "NumPy", "Scikit-learn", "Data Pipelines", "Feature Engineering"],
-    icon: "Database"
-  }
-];
-
-export const processStages = [
-  {
-    step: "01",
-    title: "UNDERSTAND",
-    subtitle: "Deconstruct the core constraint",
-    description: "Turn ambiguous business problems into clear technical requirements. Isolate where AI actually creates leverage versus where simple deterministic logic is superior."
-  },
-  {
-    step: "02",
-    title: "DESIGN",
-    subtitle: "Architecture before implementation",
-    description: "Choose an architecture appropriate for the problem rather than forcing AI into it. Define data schemas, API contracts, latency budgets, and fallback mechanisms."
-  },
-  {
-    step: "03",
-    title: "BUILD",
-    subtitle: "Clean, testable engineering",
-    description: "Develop the AI, backend, automation and integrations. Write modular services, robust error-handling, and inspectable logging for agentic reasoning paths."
-  },
-  {
-    step: "04",
-    title: "DEPLOY",
-    subtitle: "Production stability",
-    description: "Test, containerise, integrate and deploy the system into isolated environments with monitored healthchecks, environment security, and verified API connectivity."
-  },
-  {
-    step: "05",
-    title: "ITERATE",
-    subtitle: "Feedback-driven refinement",
-    description: "Use real feedback and usage telemetry to improve the system. Tune retrieval thresholds, refine prompts, and optimize database indexing based on live production demands."
   }
 ];
 
