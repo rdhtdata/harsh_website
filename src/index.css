@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: "Space Grotesk", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", Consolas, monospace;
+
+  --color-canvas: var(--theme-canvas);
+  --color-canvas-subtle: var(--theme-canvas-subtle);
+  --color-canvas-card: var(--theme-canvas-card);
+  --color-ink: var(--theme-ink);
+  --color-ink-secondary: var(--theme-ink-secondary);
+  --color-ink-muted: var(--theme-ink-muted);
+  --color-border-subtle: var(--theme-border-subtle);
+  --color-border-strong: var(--theme-border-strong);
+  --color-accent: var(--theme-accent);
+  --color-accent-hover: var(--theme-accent-hover);
+  --color-accent-subtle: var(--theme-accent-subtle);
+}
+
+:root,
+[data-theme="obsidian-dark"] {
+  color-scheme: dark;
+  --theme-canvas: #0E1015;
+  --theme-canvas-subtle: #171A21;
+  --theme-canvas-card: #13161C;
+  --theme-ink: #F4F4F6;
+  --theme-ink-secondary: #9CA3AF;
+  --theme-ink-muted: #6B7280;
+  --theme-border-subtle: #262A35;
+  --theme-border-strong: #373D4D;
+  --theme-accent: #818CF8;
+  --theme-accent-hover: #6366F1;
+  --theme-accent-subtle: rgba(129, 140, 248, 0.12);
+}
+
+[data-theme="warm-cream"] {
+  color-scheme: light;
+  --theme-canvas: #F7F7F5;
+  --theme-canvas-subtle: #EFEFEA;
+  --theme-canvas-card: #FFFFFF;
+  --theme-ink: #111111;
+  --theme-ink-secondary: #6B6B6B;
+  --theme-ink-muted: #999999;
+  --theme-border-subtle: #DDDDD8;
+  --theme-border-strong: #BDBDB5;
+  --theme-accent: #5B5CE2;
+  --theme-accent-hover: #4849C9;
+  --theme-accent-subtle: rgba(91, 92, 226, 0.08);
+}
+
+[data-theme="swiss-mono"] {
+  color-scheme: light;
+  --theme-canvas: #FAFAFA;
+  --theme-canvas-subtle: #F0F0F0;
+  --theme-canvas-card: #FFFFFF;
+  --theme-ink: #09090B;
+  --theme-ink-secondary: #52525B;
+  --theme-ink-muted: #A1A1AA;
+  --theme-border-subtle: #E4E4E7;
+  --theme-border-strong: #D4D4D8;
+  --theme-accent: #2563EB;
+  --theme-accent-hover: #1D4ED8;
+  --theme-accent-subtle: rgba(37, 99, 235, 0.08);
+}
+
+[data-theme="graphite-amber"] {
+  color-scheme: light;
+  --theme-canvas: #F5F4F0;
+  --theme-canvas-subtle: #EAE8E1;
+  --theme-canvas-card: #FFFFFF;
+  --theme-ink: #1C1917;
+  --theme-ink-secondary: #78716C;
+  --theme-ink-muted: #A8A29E;
+  --theme-border-subtle: #E2DFD7;
+  --theme-border-strong: #C7C3B7;
+  --theme-accent: #D97706;
+  --theme-accent-hover: #B45309;
+  --theme-accent-subtle: rgba(217, 119, 6, 0.08);
+}
+
+[data-theme="nordic-sage"] {
+  color-scheme: light;
+  --theme-canvas: #F3F6F4;
+  --theme-canvas-subtle: #E5EBE6;
+  --theme-canvas-card: #FFFFFF;
+  --theme-ink: #141E17;
+  --theme-ink-secondary: #536859;
+  --theme-ink-muted: #8BA091;
+  --theme-border-subtle: #D5DFD7;
+  --theme-border-strong: #B3C2B6;
+  --theme-accent: #15803D;
+  --theme-accent-hover: #166534;
+  --theme-accent-subtle: rgba(21, 128, 61, 0.08);
+}
+
+[data-theme="terracotta-clay"] {
+  color-scheme: light;
+  --theme-canvas: #F9F6F3;
+  --theme-canvas-subtle: #EFE9E2;
+  --theme-canvas-card: #FFFFFF;
+  --theme-ink: #1E1611;
+  --theme-ink-secondary: #7A665A;
+  --theme-ink-muted: #AFA399;
+  --theme-border-subtle: #E6DED6;
+  --theme-border-strong: #D3C6BA;
+  --theme-accent: #C2410C;
+  --theme-accent-hover: #9A3412;
+  --theme-accent-subtle: rgba(194, 65, 12, 0.08);
+}
+
+body {
+  background-color: var(--theme-canvas);
+  color: var(--theme-ink);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Fluid responsive typography utilities */
+.text-hero {
+  font-size: clamp(2.75rem, 7vw, 5.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.text-section-title {
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.text-project-title {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+/* Subtle architectural node pulse animation */
+@keyframes signal-pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.4;
+  }
+}
+
+.animate-signal {
+  animation: signal-pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes data-flow {
+  0% {
+    stroke-dashoffset: 24;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-data-flow {
+  stroke-dasharray: 4 6;
+  animation: data-flow 1.5s linear infinite;
+}
+
+/* Accessibility: Respect user reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-signal,
+  .animate-data-flow {
+    animation: none !important;
+  }
+}
+
+/* Custom editorial scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--theme-canvas);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--theme-border-subtle);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-ink-muted);
+}
