@@ -22,10 +22,12 @@
     <meta name="author" content="Harsh Tripathi" />
     <meta name="theme-color" content="#0E1015" />
     
-    <!-- Search Engine & Bot Access Restrictions (No Index / No Follow) -->
-    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <!-- Targeted Search Engine Restrictions -->
     <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet" />
     <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet" />
+    <meta name="slurp" content="noindex, nofollow, noarchive, nosnippet" />
+    <meta name="baiduspider" content="noindex, nofollow, noarchive, nosnippet" />
+    <meta name="yandexbot" content="noindex, nofollow, noarchive, nosnippet" />
 
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website" />
@@ -55,6 +57,7 @@
       "jobTitle": "AI Solutions Engineer",
       "description": "AI Solutions Engineer specializing in LLM applications, AI automation workflows, and production backend systems.",
       "url": "https://harshtripathi.dev",
+      "email": "rdht.work@gmail.com",
       "sameAs": [
         "https://github.com/rishabhprojects-stack",
         "https://www.linkedin.com/in/rdh-tripathi-325752307",
@@ -88,7 +91,125 @@
     </script>
   </head>
   <body class="bg-canvas text-ink antialiased selection:bg-accent/15 selection:text-ink">
-    <div id="root"></div>
+    <div id="root">
+      <header style="max-width:1200px;margin:0 auto;padding:2rem 1rem;">
+        <p style="font-family:monospace;font-size:0.875rem;">HARSH TRIPATHI · AI SOLUTIONS ENGINEER · PARIS, FRANCE / REMOTE · AVAILABLE OCTOBER 2026</p>
+        <nav style="font-family:monospace;font-size:0.875rem;margin:1rem 0;">
+          <a href="#work">Work</a> | <a href="#capabilities">Capabilities</a> | <a href="#process">Process</a> | <a href="#experience">Experience</a> | <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <main style="max-width:1200px;margin:0 auto;padding:0 1rem;">
+        <section id="hero" style="margin-bottom:3rem;">
+          <h1 style="font-size:2.5rem;font-weight:bold;margin-bottom:1rem;">I build AI systems that solve real business problems.</h1>
+          <p style="font-size:1.25rem;color:#4a5568;max-width:800px;margin-bottom:1.5rem;">
+            AI Solutions Engineer specializing in LLM applications, AI automation workflows, and production backend systems. I engineer robust, autonomous software designed for production reliability.
+          </p>
+          <div style="font-family:monospace;font-size:0.875rem;margin-bottom:1.5rem;">
+            <strong>Core Pillars:</strong> LLM Applications · AI Automation · Backend Systems · Production AI Workflows
+          </div>
+          <div style="font-family:monospace;font-size:0.8125rem;background:#f4f4f5;padding:1rem;border-radius:4px;color:#18181b;">
+            <strong>System Architecture Flow:</strong> INPUT INGESTION &rarr; REASONING &amp; RAG AGENTS &rarr; TOOL EXECUTION &amp; APIS &rarr; DETERMINISTIC VALIDATION &rarr; DEPLOYED OUTPUT
+          </div>
+        </section>
+
+        <section id="work" style="margin-bottom:3rem;">
+          <h2 style="font-size:1.75rem;font-weight:bold;border-bottom:1px solid #e4e4e7;padding-bottom:0.5rem;margin-bottom:1.5rem;">01 / Selected Work &amp; Systems</h2>
+          
+          <article style="margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid #e4e4e7;">
+            <h3 style="font-size:1.25rem;font-weight:bold;">01 · FOREO — AI-Powered Advertising Operations</h3>
+            <p style="font-family:monospace;font-size:0.875rem;color:#4f46e5;">Role: AI Contract Engineer | Focus: AI Agents · LLM Workflows · RAG · APIs · Automation · Backend</p>
+            <p><strong>Summary:</strong> An AI-powered platform designed to automate the lifecycle of digital advertising operations — from campaign planning and product data processing to creative workflows, publishing, monitoring and optimisation.</p>
+            <p><strong>Problem &amp; Approach:</strong> Global product lines required extensive manual hours coordinating briefs, creative variations, catalog synchronization, and live channel deployment. Engineered a modular AI pipeline with dedicated task-specific agents orchestrated via FastAPI backend services, vector search (RAG), and containerized microservices pushing directly to ad platform APIs.</p>
+            <p><strong>Tech Stack:</strong> Python, FastAPI, Docker, Vector Search, Multimodal AI, PostgreSQL, Redis, REST APIs.</p>
+          </article>
+
+          <article style="margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid #e4e4e7;">
+            <h3 style="font-size:1.25rem;font-weight:bold;">02 · OCTAGRAM — AI-Powered Business Automation</h3>
+            <p style="font-family:monospace;font-size:0.875rem;color:#4f46e5;">Role: Founder &amp; Technical Lead | Highlight: 6+ Signed Clients | Website: https://octagramai.com</p>
+            <p><strong>Summary:</strong> Founded and technically led a technology company building digital platforms, AI automation systems and business software for enterprise clients.</p>
+            <p><strong>Problem &amp; Approach:</strong> Service businesses suffer from disjointed manual processes for lead discovery, research, qualification, and CRM entry. Designed bespoke automation engines combining browser agents (Playwright), LLM reasoning pipelines, CRM webhooks, and modern web applications.</p>
+            <p><strong>Tech Stack:</strong> Python, FastAPI, AI Agents, Playwright, Celery, PostgreSQL, Next.js, React, Tailwind CSS.</p>
+          </article>
+
+          <article style="margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid #e4e4e7;">
+            <h3 style="font-size:1.25rem;font-weight:bold;">03 · FOREO — Multimodal AI / RAG System</h3>
+            <p style="font-family:monospace;font-size:0.875rem;color:#4f46e5;">Role: AI Intern · Team Lead | Focus: Vector Search · Embeddings · Multimodal Ingestion · Ollama · FAISS</p>
+            <p><strong>Summary:</strong> A multimodal AI application combining image classification, dense retrieval, and LLM-generated responses grounded in structured knowledge bases.</p>
+            <p><strong>Approach:</strong> Led a team of four engineers building a dual-stream ingestion pipeline extracting joint visual and textual embeddings into FAISS, integrating Ollama local inference and cloud LLM APIs via FastAPI.</p>
+            <p><strong>Tech Stack:</strong> Python, FastAPI, PyTorch, FAISS, CLIP, Ollama (Llama 3), OpenAI GPT-4o Vision API, Docker.</p>
+          </article>
+
+          <article style="margin-bottom:2rem;">
+            <h3 style="font-size:1.25rem;font-weight:bold;">04 · FOREO / Analytics Research — Influencer ROI Prediction</h3>
+            <p style="font-family:monospace;font-size:0.875rem;color:#4f46e5;">Role: ML &amp; Backend Developer | Focus: Predictive Modeling · Feature Engineering · Data Pipelines · SQL</p>
+            <p><strong>Summary:</strong> An ML system using multi-platform business data to estimate creator campaign performance and support marketing decision-making.</p>
+            <p><strong>Approach:</strong> Built SQL ETL pipelines aggregating past campaign records, engineered engagement velocity and authenticity features, and trained Scikit-learn regression/ensemble models served via FastAPI.</p>
+            <p><strong>Tech Stack:</strong> Python, Pandas, NumPy, Scikit-learn, SQL, FastAPI, PostgreSQL.</p>
+          </article>
+        </section>
+
+        <section id="capabilities" style="margin-bottom:3rem;">
+          <h2 style="font-size:1.75rem;font-weight:bold;border-bottom:1px solid #e4e4e7;padding-bottom:0.5rem;margin-bottom:1.5rem;">02 / Capabilities &amp; Engineering Disciplines</h2>
+          <ul>
+            <li><strong>AI Applications:</strong> Production-grade generative systems built with prompt orchestration, structured validation, grounded context retrieval (RAG), and deterministic tool execution (LLMs, RAG, Agents, Tool Calling, Multimodal AI, Ollama, FAISS).</li>
+            <li><strong>Automation:</strong> Autonomous task execution connecting web interfaces, CRM databases, communication channels, and back-office operations (Agents, APIs, Playwright, Webhooks, Task Queues).</li>
+            <li><strong>Backend Systems:</strong> Robust, asynchronous API layers and microservices built to withstand production traffic and handle long-running inference jobs (Python, FastAPI, PostgreSQL, Docker, REST APIs, Redis, Pydantic).</li>
+            <li><strong>Data &amp; ML:</strong> End-to-end data processing pipelines, statistical feature extraction, and supervised ML models (Python, SQL, Pandas, NumPy, Scikit-learn, Feature Engineering).</li>
+          </ul>
+        </section>
+
+        <section id="process" style="margin-bottom:3rem;">
+          <h2 style="font-size:1.75rem;font-weight:bold;border-bottom:1px solid #e4e4e7;padding-bottom:0.5rem;margin-bottom:1.5rem;">03 / Engineering Process</h2>
+          <ol>
+            <li><strong>Understand:</strong> Deconstruct the core constraint. Turn ambiguous business problems into clear technical requirements.</li>
+            <li><strong>Design:</strong> Architecture before implementation. Define data schemas, API contracts, latency budgets, and fallback mechanisms.</li>
+            <li><strong>Build:</strong> Clean, testable engineering. Write modular services, robust error-handling, and inspectable logging.</li>
+            <li><strong>Deploy:</strong> Production stability. Containerize with Docker, configure healthchecks, and verify API connectivity.</li>
+            <li><strong>Iterate:</strong> Feedback-driven refinement based on real production usage and telemetry.</li>
+          </ol>
+        </section>
+
+        <section id="experience" style="margin-bottom:3rem;">
+          <h2 style="font-size:1.75rem;font-weight:bold;border-bottom:1px solid #e4e4e7;padding-bottom:0.5rem;margin-bottom:1.5rem;">04 / Experience &amp; Education</h2>
+          <div style="margin-bottom:1rem;">
+            <h3>FOREO — AI Contract Engineer (2026 — Present, Paris / Remote)</h3>
+            <p>Building AI-powered advertising operations, agentic workflows, backend services, integrations, and automation systems.</p>
+          </div>
+          <div style="margin-bottom:1rem;">
+            <h3>OCTAGRAM — Founder &amp; Technical Lead (2026 — Present, Remote)</h3>
+            <p>Founded and lead a technology company building digital platforms, AI automation systems, and business software for 6+ clients.</p>
+          </div>
+          <div style="margin-bottom:1rem;">
+            <h3>FOREO — AI Intern · Team Lead (2025 — 2026, Paris, France)</h3>
+            <p>Led a team of four engineers building multimodal AI applications, RAG systems, backend services, and ML workflows.</p>
+          </div>
+          <div style="margin-bottom:1rem;">
+            <h3>TRAINITY — Data Analyst Intern (2023 — 2024, Bangalore, India)</h3>
+            <p>Business analytics, automated reporting, data processing, and SQL/Python workflows.</p>
+          </div>
+          <div style="margin-bottom:1.5rem;">
+            <h3>ATIC-FRANCE — Co-founder / AI Developer (2022, Paris, France)</h3>
+            <p>NLP pipelines for speech-to-text extraction and automated video summarisation.</p>
+          </div>
+          <div>
+            <h3>Education &amp; Credentials</h3>
+            <p><strong>BITS Pilani:</strong> B.Sc. Computer Science (2022 — 2026) · GPA: 9.27 / 10</p>
+            <p><strong>IBM:</strong> Data Science Professional Certificate</p>
+          </div>
+        </section>
+
+        <section id="contact" style="margin-bottom:3rem;">
+          <h2 style="font-size:1.75rem;font-weight:bold;border-bottom:1px solid #e4e4e7;padding-bottom:0.5rem;margin-bottom:1.5rem;">05 / Contact &amp; Connect</h2>
+          <p><strong>Email:</strong> <a href="mailto:rdht.work@gmail.com">rdht.work@gmail.com</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/rdh-tripathi-325752307">https://linkedin.com/in/rdh-tripathi-325752307</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/rishabhprojects-stack">https://github.com/rishabhprojects-stack</a></p>
+          <p><strong>Location:</strong> Paris, France (Open to remote &amp; onsite roles)</p>
+          <p><strong>Availability:</strong> Full-time roles starting October 2026</p>
+        </section>
+      </main>
+    </div>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
