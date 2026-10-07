@@ -1,0 +1,73 @@
+# ----------------------------------------------------------------------
+# HOSTINGER / APACHE / LITESPEED SECURITY CONFIGURATION & ROUTING
+# ----------------------------------------------------------------------
+
+# 1. Disable Directory Listing & Server Signatures
+Options -Indexes -MultiViews
+ServerSignature Off
+
+# 2. Prevent Access to Hidden / Sensitive Files (.git, .env, .htaccess, .lock, etc.)
+<FilesMatch "^\.|\.(bak|config|sql|fla|psd|ini|log|sh|inc|swp|dist|lock)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# 3. Security Headers
+<IfModule mod_headers.c>
+    # HTTP Strict Transport Security (HSTS)
+    Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+    
+    # Clickjacking Protection
+    Header always set X-Frame-Options "DENY"
+    
+    # MIME Sniffing Protection
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # Referrer Policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Browser Feature Policy Lockdown
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), vr=(), interest-cohort=()"
+    
+    # Modern XSS filter directive
+    Header always set X-XSS-Protection "0"
+    
+    # Content Security Policy (Strict & Hardened)
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none';"
+</IfModule>
+
+# 4. HTTPS Enforcing & SPA Client-Side Routing
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Enforce HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Serve existing files and directories directly
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Route all other paths to index.html for SPA
+    RewriteRule ^ index.html [L]
+</IfModule>
+
+# 5. Asset Caching & Optimization
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+    ExpiresByType text/html "access plus 0 seconds"
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
